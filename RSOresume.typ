@@ -1,9 +1,6 @@
 // Thank you skyzh (Alex Chi) - https://github.com/skyzh/typst-cv-template
 
-// #set text(font: "Noto Sans", size: 10pt)
-// #set text(spacing: 100%, size: 10.5pt)
 #set text(spacing: 100%, size: 11.25pt)
-// #show heading: it => {v(-5pt); smallcaps(it)}
 #show heading: it => {v(-5pt); smallcaps(it)}
 
 #show link: underline;
@@ -106,7 +103,8 @@ _Independent Researcher #h(1fr) Brooklyn, NY_ \
 *LC-3 Program Assembler and Simulator* #link("https://github.com/richardso21/complxer")[#icon[]] | 
 _Go, Assembly, Little Computer 3_
   - Built a computer simulator in Golang that executes object files, satisfying nearly all specifications of the LC-3 ISA.
-  - Assembler is able to parse and convert most LC-3 assembly programs into an object (binary) executable.
+  - Assembler supports syntax error checking and conversion from LC-3 assembly into object (binary) executables.
+  // - Assembler is able to parse and convert most LC-3 assembly programs into an object (binary) executable.
   // - Developed using the Electron framework and TypeScript language under the hood.
 
 // *eyePause* | _Typescript, Electron_
@@ -137,5 +135,5 @@ _C++, PlatformIO, SQLite_
   - Cultivated 500,000+ viewers and 900+ followers of my technology/programming blog on 
     #link("https://richardso21.medium.com")[Medium].
   - Winner of the #link("https://www.cfgnh.org/articles/milton-fisher-fund-awards-104-000-in-scholarships")[
-    Milton Fisher Scholarship for Innovation and Creativity].
+    2021 Milton Fisher Scholarship for Innovation and Creativity].
   - 1#super[st] Award Winner of the 2020 Terra NYC STEM Fair.
