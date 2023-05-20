@@ -79,7 +79,7 @@ _Technology Intern #h(1fr) Omaha, NE_ \
   - Decreased error margins of price estimations by 31% versus an existing 3rd party pricing analytics solution.
   - Created and deployed an Angular application to fetch predictions from said models; currently used by sales team.
 
-*Exoskeleton Prosthetic Intelligent Controls (EPIC) Lab --- Georgia Tech* #h(1fr) 01/2022 -- 08/2023 \
+*Exoskeleton Prosthetic Intelligent Controls (EPIC) Lab --- Georgia Tech* #h(1fr) 01/2022 -- Present \
 _Undergraduate Research Assistant #h(1fr) Atlanta, GA_ \
   // - Helped maintain an ML training and realtime prediction pipeline for a CNN-based gait phase estimator.
   - Assisted in training and experimenting machine learning (CNN) gait phase estimator models with inertial sensor data.
