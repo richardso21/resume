@@ -1,9 +1,7 @@
 // Thank you skyzh (Alex Chi) - https://github.com/skyzh/typst-cv-template
 
-// #set text(font: "Noto Sans", size: 10pt)
-// #set text(spacing: 100%, size: 10.5pt)
-#set text(spacing: 100%, size: 11.25pt)
-// #show heading: it => {v(-5pt); smallcaps(it)}
+// #set text(spacing: 100%, size: 10pt, font: "Noto Sans")
+#set text(spacing: 100%, size: 10.75pt)
 #show heading: it => {v(-5pt); smallcaps(it)}
 
 #show link: underline;
@@ -33,6 +31,7 @@
 ]
 #v(-5pt)
 #set box(height: 11pt)
+#icon[] 347-281-3815 |
 #icon[] richardso2021\@gmail.com |
 // #icon("./assets/github.svg") 
 #icon[] #link("https://github.com/richardso21")[github.com/richardso21] | 
@@ -69,34 +68,38 @@ _B.S. in Computer Science --- GPA: 4.0 #h(1fr) Atlanta, GA_ \
 == Work Experience
 #separator()
 
+// *Tanium* | _Incoming Software Engineering Intern_ #h(1fr) 06/2023 -- 08/2023 \
+*Tanium* #h(1fr) 06/2023 -- 08/2023 \
+_Incoming Software Engineer Intern #h(1fr) Kirkland, WA (Remote)_ \
+
 *College of Computing --- Georgia Tech* #h(1fr) 01/2023 -- Present \
 _Teaching Assistant #h(1fr) Atlanta, GA_ \
   - Led sections of a 50-student cohort in the course instruction of CS 2110: Computer Organization & Programming.
   - Lectured biweekly on the foundations of computer architecture, datapath tracing, LC-3 assembly, and the C language.
   - Aided 800+ students in course material and assignment debugging via office hours and student Q&A forms.
-  // - Crafted and evaluated assignments/assessments to gauge students' understanding of core concepts.
 
-*Union Pacific* #h(1fr) 05/2022 -- 08/2022 \
+*Union Pacific Railroad* #h(1fr) 05/2022 -- 08/2022 \
 _Technology Intern #h(1fr) Omaha, NE_ \
-  - Generated rail shipment pricing models with up to 97% accuracy utilizing Salesforce CRM Analytics and XGboost.
-  - Decreased error margins of price estimations by 31% versus an existing 3rd party pricing analytics solution.
-  - Created and deployed an Angular application to fetch predictions from said models; currently used by sales team.
+  - Deployed an internal tool to simulate prices for hypothetical shipments based on past trends; actively used by sales team.
+  - Designed ML regression models for such price simulations/estimations using Salesforce CRM Analytics and XGBoost.
+  - Performed rigorous feature engineering on historical shipment datasets to maximize model accuracy up to 97% \
+    and decrease error margins of estimations by 31% versus UP's existing pricing analytics solution.
 
-*Exoskeleton Prosthetic Intelligent Controls (EPIC) Lab --- Georgia Tech* #h(1fr) 01/2022 -- 08/2023 \
+*Exoskeleton Prosthetic Intelligent Controls (EPIC) Lab --- Georgia Tech* #h(1fr) 01/2022 -- Present \
 _Undergraduate Research Assistant #h(1fr) Atlanta, GA_ \
-  // - Helped maintain an ML training and realtime prediction pipeline for a CNN-based gait phase estimator.
-  - Assisted in training and experimenting machine learning (CNN) gait phase estimator models with inertial sensor data.
-  - Analyzed subject physiological data using MATLAB to discover optimal exoskeleton torque assistance parameters.
-  - Fully automated a data extraction pipeline for multi-dimensional electromyography and metabolic activity timeseries.
+  - Managed data collection and analysis across two exoskeleton studies: ≈20 subjects total, each with 16-20 experimental trials.
+  - Automated a data pipeline for collected physiological signals into MATLAB structures for convenient access and distribution.
+  // - Analyzed subjects' electromyography and metabolic activity trends to discover optimal exoskeleton torque assistance profiles.
+  - Optimized training data loading for a machine learning (CNN) gait phase estimator to be 60x faster with Numpy vectorization.
+  // - Assisted in training and experimenting machine learning (CNN) gait phase estimator models with inertial sensor data.
 
 *Research Foundation of The City University of New York (CUNY)* #h(1fr) 07/2019 -- 12/2021 \
 _Independent Researcher #h(1fr) Brooklyn, NY_ \
-  - Performed research on machine learning applications under Dr. Michael I Mandel at Brooklyn College CUNY.
-  - Optimized an existing bird audio detection model to be over 90% accurate using the PCEN audio preprocessor.
+  - Performed research on audio and vision deep learning applications under Dr. Michael I Mandel.
+  - Refined an existing bird audio detection model to be over 90% accurate using the PCEN audio preprocessor.
   - Utilized foreground segmentation techniques to predict and automatically annotate animal presence in image data.
   - Co-Author of a #link("https://ieeexplore.ieee.org/document/9053338")[2020 IEEE ICASSP conference paper] 
     featuring my research on ML for bird audio detection.
-  // - Familiarized with image/spectrogram data wrangling and visualization approaches using Numpy and Matplotlib.
 
 == Projects
 #separator()
@@ -106,8 +109,7 @@ _Independent Researcher #h(1fr) Brooklyn, NY_ \
 *LC-3 Program Assembler and Simulator* #link("https://github.com/richardso21/complxer")[#icon[]] | 
 _Go, Assembly, Little Computer 3_
   - Built a computer simulator in Golang that executes object files, satisfying nearly all specifications of the LC-3 ISA.
-  - Assembler is able to parse and convert most LC-3 assembly programs into an object (binary) executable.
-  // - Developed using the Electron framework and TypeScript language under the hood.
+  - Assembler supports syntax error checking and conversion from LC-3 assembly into object (binary) executables.
 
 // *eyePause* | _Typescript, Electron_
 //   - Engineered a desktop application to track screen-on time and assist users in taking regular breaks from the screen.
@@ -117,25 +119,13 @@ _Go, Assembly, Little Computer 3_
 *Solar Car Telemetry System* #link("https://github.com/richardso21/SITHS-SolarCar")[#icon[]] | 
 _C++, PlatformIO, SQLite_
   - Prototyped a real-time solution to measure and transmit vital statistics of a solar car to a local SQLite database.
-  - Programmed microcontrollers to manage communication between hardware modules (GPS, ADCs, LoRa Radio).
+  - Programmed microcontrollers for precise communication between multiple hardware modules (GPS, ADCs, LoRa Radio).
 
-// *#lorem(2)* #h(1fr) 2333/23 -- 2333/23 \
-// #lorem(5) #h(1fr) #lorem(2) \
-// - #lorem(20)
-// - #lorem(30)
-// - #lorem(40)
-
-// *#lorem(2)* #h(1fr) 2333/23 -- 2333/23 \
-// #lorem(5) #h(1fr) #lorem(2) \
-// - #lorem(20)
-// - #lorem(30)
-// - #lorem(40)
-
-== Awards \& Achievements
+== Achievements
 #separator()
 
   - Cultivated 500,000+ viewers and 900+ followers of my technology/programming blog on 
     #link("https://richardso21.medium.com")[Medium].
   - Winner of the #link("https://www.cfgnh.org/articles/milton-fisher-fund-awards-104-000-in-scholarships")[
-    Milton Fisher Scholarship for Innovation and Creativity].
+    2021 Milton Fisher Scholarship for Innovation and Creativity].
   - 1#super[st] Award Winner of the 2020 Terra NYC STEM Fair.
