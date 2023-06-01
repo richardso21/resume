@@ -90,7 +90,7 @@ _Undergraduate Research Assistant #h(1fr) Atlanta, GA_ \
   - Managed data collection and analysis across two exoskeleton studies: ≈20 subjects total, each with 16-20 experimental trials.
   - Automated a data pipeline for collected physiological signals into MATLAB structures for convenient access and distribution.
   // - Analyzed subjects' electromyography and metabolic activity trends to discover optimal exoskeleton torque assistance profiles.
-  - Optimized training data loading for a machine learning (CNN) gait phase estimator to be 60x faster with Numpy vectorization.
+  - Optimized data loading for a machine learning (CNN) gait phase estimator to be 60x faster with Numpy vectorization.
   // - Assisted in training and experimenting machine learning (CNN) gait phase estimator models with inertial sensor data.
 
 *Research Foundation of The City University of New York (CUNY)* #h(1fr) 07/2019 -- 12/2021 \
