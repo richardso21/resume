@@ -42,8 +42,8 @@
 == Education
 #separator()
 
-*Georgia Institute of Technology* #h(1fr) 08/2021 -- 05/2024 \
-_B.S. in Computer Science --- GPA: 4.0 #h(1fr) Atlanta, GA_ \
+*Georgia Institute of Technology* #h(1fr) 08/2021 -- 05/2025 \
+_B.S./M.S in Computer Science (Interactive Intelligence) --- GPA: 4.0 #h(1fr) Atlanta, GA_ \
 - Relevant Coursework: Java OOP, Data Structures, Computer Organization,
   Algorithms Honors, Artificial Intelligence
 
