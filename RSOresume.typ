@@ -87,7 +87,8 @@ _Technology Intern #h(1fr) Omaha, NE_ \
 
 *Exoskeleton Prosthetic Intelligent Controls (EPIC) Lab --- Georgia Tech* #h(1fr) 01/2022 -- Present \
 _Undergraduate Research Assistant #h(1fr) Atlanta, GA_ \
-  - Managed data collection and analysis across two exoskeleton studies: ≈20 subjects total, each with 16-20 experimental trials.
+  - Managed and analyzed data across 400+ experimental trials to discover optimal human exoskeleton torque assistance profiles.
+  // - Managed data collection and analysis across two exoskeleton studies: ≈20 subjects total, each with 16-20 experimental trials.
   - Automated a data pipeline for collected physiological signals into MATLAB structures for convenient access and distribution.
   // - Analyzed subjects' electromyography and metabolic activity trends to discover optimal exoskeleton torque assistance profiles.
   - Optimized data loading for a machine learning (CNN) gait phase estimator to be 60x faster with Numpy vectorization.
