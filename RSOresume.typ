@@ -70,7 +70,7 @@ _B.S./M.S in Computer Science (Interactive Intelligence) --- GPA: 4.0 #h(1fr) At
 
 // *Tanium* | _Incoming Software Engineering Intern_ #h(1fr) 06/2023 -- 08/2023 \
 *Tanium* #h(1fr) 06/2023 -- 08/2023 \
-_Incoming Software Engineer Intern #h(1fr) Kirkland, WA (Remote)_ \
+_Software Engineer Intern #h(1fr) Kirkland, WA (Remote)_ \
 
 *College of Computing --- Georgia Tech* #h(1fr) 01/2023 -- Present \
 _Teaching Assistant #h(1fr) Atlanta, GA_ \
