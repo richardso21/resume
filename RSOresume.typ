@@ -70,8 +70,8 @@ _B.S./M.S in Computer Science (Interactive Intelligence) --- GPA: 4.0 #h(1fr) At
 #separator()
 
 *Tanium* --- _Software Engineering Intern_ #h(1fr) 06/2023 -- 08/2023 \
-  - Developed *RESTful API* routes and frontend elements for a new interface that monitors *CRUD* operations 
-    on an underlying *PostgreSQL* database in real time, improving customer visibility into the console's state by 10x.
+  - Developed *RESTful API* routes and frontend elements for a new interface that audits user *CRUD* operations 
+    on an underlying *PostgreSQL* database, improving customer visibility into the server console's state by 10x.
   - Exercised test-driven development and data validation using *Jest*, *Jasmine*, and *Joi* to ensure UI and API reliability.
   - Delivered rapid improvements & bug fixes in a *Knex.js* and *React TypeScript* monorepo, tracked using *Jira Kanban*.
 
