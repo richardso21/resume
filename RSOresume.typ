@@ -44,7 +44,7 @@
 #separator()
 
 *Georgia Institute of Technology* #h(1fr) 08/2021 -- 05/2025 \
-_B.S./M.S in Computer Science (Interactive Intelligence) --- GPA: 4.0 #h(1fr) Atlanta, GA_ \
+_B.S. & M.S in Computer Science, concentration in Interactive Intelligence --- GPA: 4.0 #h(1fr) Atlanta, GA_ \
 - Coursework: Java OOP, Data Structures, Computer Architecture, Discrete Math,
   Algorithms Honors, Artificial Intelligence
 
@@ -62,7 +62,7 @@ _B.S./M.S in Computer Science (Interactive Intelligence) --- GPA: 4.0 #h(1fr) At
   stroke: none,
   [*Programming Languages*], [|], [Python, TypeScript/Javascript, Go, C/C++, MATLAB, Java],
   [*Frameworks / Libraries*], [|], [React, Jest, Express, NumPy, Pandas, Matplotlib, Scikit Learn, PyTorch, Keras],
-  [*Misc. Technologies*], [|], [Git, Jira, Github Actions, Vim, REST, Firebase, PostgreSQL, SQlite, Docker, LaTeX]
+  [*Misc. Technologies*], [|], [Git, Jira, Github Actions, Vim, Firebase, PostgreSQL, SQlite, Docker, LaTeX, Salesforce CRM]
 )
 #v(-2.5pt)
 
@@ -76,13 +76,13 @@ _B.S./M.S in Computer Science (Interactive Intelligence) --- GPA: 4.0 #h(1fr) At
   - Delivered rapid improvements & bug fixes in a *Knex.js* and *React TypeScript* monorepo, tracked using *Jira Kanban*.
 
 *Georgia Tech College of Computing* --- _Teaching Assistant_ #h(1fr) 01/2023 -- Present \
-  - Led biweekly lecture sections of a 50-student cohort in CS 2110: Computer Organization & Programming.
+  - Led biweekly lecture sections of a 50-student cohort in Computer Organization & Programming (CS 2110).
   - Mastered and taught the foundations of computer architecture, datapath tracing, *LC-3 assembly*, and the *C language*.
   - Aided 800+ students in course material inquiries and assignment debugging through office hours and student Q&A forms.
 
 *Union Pacific* --- _Technology Intern_ #h(1fr) 05/2022 -- 08/2022 \
-  - Deployed an internal tool to simulate prices for hypothetical shipments based on past trends; actively used by sales team.
-  - Designed *ML regression* models for such price simulations/estimations using Salesforce CRM Analytics and *XGBoost*.
+  - Created and deployed an internal tool in *Angular* to simulate prices for hypothetical shipments based on past trends.
+  - Designed *ML regression* models for such price simulations/estimations using *Salesforce CRM Analytics* and *XGBoost*.
   - Performed rigorous feature engineering on historical shipment datasets to maximize model accuracy up to 97% \
     and decrease error margins of estimations by 31% versus UP's existing pricing analytics solution.
 
@@ -104,7 +104,7 @@ _B.S./M.S in Computer Science (Interactive Intelligence) --- GPA: 4.0 #h(1fr) At
 // #show link: (it) => underline(stroke:1pt + white)[#it]
 
 *LC-3 Program Assembler and Simulator* #link("https://github.com/richardso21/complxer")[#icon[]] | 
-_Go, Assembly, Little Computer 3_
+_Go, Assembly, Little Computer 3_ #h(1fr) 12/2022
   - Built a computer simulator in *Golang* that executes object files, satisfying nearly all specifications of the LC-3 ISA.
   - Assembler supports syntax error checking and conversion from LC-3 assembly into object (binary) executables.
 
@@ -114,7 +114,7 @@ _Go, Assembly, Little Computer 3_
   // - Developed using the Electron framework and TypeScript language under the hood.
 
 *Solar Car Telemetry System* #link("https://github.com/richardso21/SITHS-SolarCar")[#icon[]] | 
-_C++, PlatformIO, SQLite_
+_C++, PlatformIO, SQLite_ #h(1fr) 08/2021
   - Prototyped a real-time solution to measure and transmit vital statistics of a solar car to a local *SQLite* database.
   - Programmed microcontrollers for precise communication between multiple hardware modules (GPS, ADCs, LoRa Radio).
 
