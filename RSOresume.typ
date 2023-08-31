@@ -60,7 +60,7 @@ _B.S. & M.S in Computer Science, concentration in Interactive Intelligence --- G
   align: (x, y) => (right, center, left).at(x),
   inset: 3.5pt,
   stroke: none,
-  [*Programming Languages*], [|], [Python, TypeScript/Javascript, Go, C/C++, MATLAB, Java],
+  [*Programming Languages*], [|], [Python, TypeScript, JavaScript, Go, C, C++, MATLAB, Java],
   [*Frameworks / Libraries*], [|], [React, Jest, Express, NumPy, Pandas, Matplotlib, Scikit Learn, PyTorch, Keras],
   [*Misc. Technologies*], [|], [Git, Jira, Github Actions, Vim, Firebase, PostgreSQL, SQlite, Docker, LaTeX, Salesforce CRM]
 )
@@ -121,7 +121,7 @@ _C++, PlatformIO, SQLite_ #h(1fr) 08/2021
 == Achievements
 #separator()
 
-  - Cultivated 700,000+ viewers and 950+ followers in my technology/programming blog on 
+  - Cultivated 800,000+ viewers and 970+ followers in my technology/programming blog on 
     #link("https://richardso21.medium.com")[Medium].
   - Winner of the #link("https://www.cfgnh.org/articles/milton-fisher-fund-awards-104-000-in-scholarships")[
     2021 Milton Fisher Scholarship for Innovation and Creativity].
