@@ -89,7 +89,7 @@ _B.S. & M.S in Computer Science, concentration in Interactive Intelligence --- G
 *Georgia Tech EPIC Lab* --- _Undergraduate Research Assistant_ #h(1fr) 01/2022 -- 08/2023 \
   - Analyzed data across 400+ experimental trials to discover optimal human exoskeleton torque assistance profiles.
   - Automated a data pipeline for N-D signal time series into *MATLAB* structures for convenient access and distribution.
-  - Optimized data loading for *ConvNet* gait phase estimators to be 25x faster with NumPy vectorization.
+  - Optimized data loading for *ConvNet* gait phase estimators to be 25x faster with *NumPy* vectorization.
 
 *Brooklyn College CUNY* --- _Independent Researcher_ #h(1fr) 07/2019 -- 12/2021 \
   - Performed research on *audio and vision deep learning* applications under Dr. Michael I Mandel.
