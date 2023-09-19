@@ -44,7 +44,7 @@
 #separator()
 
 *Georgia Institute of Technology* #h(1fr) 08/2021 -- 05/2025 \
-_B.S. & M.S in Computer Science, concentration in Interactive Intelligence --- GPA: 4.0 #h(1fr) Atlanta, GA_ \
+_B.S. Computer Science, concentration in Interactive Intelligence --- GPA: 4.0 #h(1fr) Atlanta, GA_ \
 - Coursework: Data Structures, Computer Architecture, Discrete Math,
   Algorithms Honors, Graduate Machine Learning
 
