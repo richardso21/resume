@@ -76,9 +76,12 @@ _B.S. Computer Science, concentration in Interactive Intelligence --- GPA: 4.0 #
   - Delivered rapid improvements & bug fixes in a *Knex.js* and *React TypeScript* monorepo, tracked using *Jira Kanban*.
 
 *Georgia Tech College of Computing* --- _Teaching Assistant_ #h(1fr) 01/2023 -- Present \
-  - Led biweekly lecture sections of a 50-student cohort in Computer Organization & Programming (CS 2110).
-  - Mastered and taught the foundations of computer architecture, datapath tracing, *LC-3 assembly*, and the *C language*.
-  - Aided 800+ students in course material inquiries and assignment debugging through office hours and student Q&A forms.
+  - Taught a 50-student cohort the foundations of computer acthitecture, the *C language*, and memory allocation principles.
+  - Primarily maintained #link("https://github.com/gt-cs2110/lc3tools")[*lc3tools*], a suite of educational tools to write, assemble, and simulate LC-3 assembly programs.
+  // - Mastered and taught the foundations of computer architecture, datapath tracing, *LC-3 assembly*, and the *C language*.
+  // - Led biweekly lecture sections of a 50-student cohort in Computer Organization & Programming (CS 2110).
+  // - Mastered and taught the foundations of computer architecture, datapath tracing, *LC-3 assembly*, and the *C language*.
+  - Aided 1600+ students in course material inquiries and assignment debugging through office hours and student Q&A forms.
 
 *Union Pacific* --- _Technology Intern_ #h(1fr) 05/2022 -- 08/2022 \
   - Created and deployed an internal tool in *Angular* to simulate prices for hypothetical shipments based on past trends.
@@ -105,8 +108,9 @@ _B.S. Computer Science, concentration in Interactive Intelligence --- GPA: 4.0 #
 
 *LC-3 Program Assembler and Simulator* #link("https://github.com/richardso21/complxer")[#icon[]] | 
 _Go, Assembly, Little Computer 3_ #h(1fr) 12/2022
-  - Built a computer simulator in *Golang* that executes object files, satisfying nearly all specifications of the LC-3 ISA.
-  - Assembler supports syntax error checking and conversion from LC-3 assembly into object (binary) executables.
+  - Built a computer simulator in *Golang* that assembles and executes programs, satisfying most specifications of the LC-3 ISA.
+  - Created while I was still a student for the course that taught the LC-3 assembly language and architecture (CS 2110).
+  // - Assembler supports syntax error checking and conversion from LC-3 assembly into object (binary) executables.
 
 // *eyePause* | _Typescript, Electron_
 //   - Engineered a desktop application to track screen-on time and assist users in taking regular breaks from the screen.
