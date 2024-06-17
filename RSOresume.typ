@@ -1,8 +1,7 @@
 // Thank you skyzh (Alex Chi) - https://github.com/skyzh/typst-cv-template
 
 // #set text(spacing: 100%, size: 10pt, font: "Noto Sans")
-#set text(spacing: 100%, size: 11pt)
-// #show text: it => {v(-.5pt); it; v(-.5pt)}
+// #set text(spacing: 100%, size: 11pt)
 #show heading: it => {v(-5pt); smallcaps(it)}
 
 #show link: underline;
@@ -26,6 +25,32 @@
 
 #let separator() = {v(-4pt); line(length: 100%); v(-5pt)}
 
+#let dateOutput(dates) = {
+  let t = type(dates)
+  if t != array {
+    if t == str {
+      return [#dates]
+    }
+    return []
+  }
+  let l = dates.len()
+  if l != 1 and l != 2 {
+    return []
+  }
+  if l == 1 {
+    return [#dates.at(0)]
+  } else {
+    return [#dates.at(0) --- #dates.at(1)]
+  }
+}
+
+#let resumeEntry(title, titleSeparator: [|], role, dates, body) = {
+  [
+    *#title* #titleSeparator #text(style: "italic")[#role] #h(1fr) #dateOutput(dates) \
+    #body
+  ]
+}
+
 #align(center)[
 #text(size:16pt)[
 = Richard So
@@ -34,9 +59,8 @@
 #set box(height: 11pt)
 #icon[] 347-281-3815 |
 #icon[] richardso2021\@gmail.com |
-// #icon("./assets/github.svg") 
-#icon[] #link("https://github.com/richardso21")[github.com/richardso21] | 
-#icon[] #link("https://linkedin.com/in/richardso21")[in/richardso21] | 
+#icon[] #link("https://github.com/richardso21")[github.com/richardso21] |
+#icon[] #link("https://linkedin.com/in/richardso21")[in/richardso21] |
 #icon[] #link("https://sorichard.com")[sorichard.com]
 ]
 
@@ -44,13 +68,149 @@
 #separator()
 
 *Georgia Institute of Technology* #h(1fr) 08/2021 -- 05/2025 \
-_B.S. Computer Science, concentration in Interactive Intelligence --- GPA: 4.0 #h(1fr) Atlanta, GA_ \
-- Coursework: Data Structures, Computer Architecture, Discrete Math,
-  Algorithms Honors, Graduate Machine Learning
+_B.S./M.S. Computer Science, Interactive Intelligence --- GPA: 4.0
+#h(1fr) Atlanta, GA_ \
+- Coursework: Data Structures, Discrete Math,
+  Algorithms Honors, Machine Learning, Computer Vision
 
-// *#lorem(2)* #h(1fr) 2333/23 -- 2333/23 \
-// #lorem(5) #h(1fr) #lorem(2) \
-// - #lorem(10)
+== Work Experience
+#separator()
+
+
+#resumeEntry(
+  "Amazon Web Services",
+  "Software Engineering Intern (ML)",
+  ("05/2024", "08/2024"))[
+  - Part of an internal investigative team aiming to quantitatively measure and analyze user/developer experience across AWS.
+  - Overhauled a pipeline to ingest unstructured user sessions into a queryable data lake leveraging AWS Lambda, S3, and Glue.
+  - Optimized a screenshot labeling process used to categorize user activity through AWS Rekognition and Augmented AI.
+  // - #lorem(50)
+  // - #lorem(15)
+  // - #lorem(15)
+]
+
+#resumeEntry(
+  "GT Financial Services Innovation Lab",
+  "Research Assistant",
+  ("05/2024", "Present"))[
+  - Explored benchmarking strategies, datasets, and metrics to evaluate against state-of-the-art financial LLMs.
+  - Compiled and curated large textual datasets for LLM fine-tuning with Scrapy, BeautifulSoup4 and NLTK.
+  // - #lorem(15)
+  // - #lorem(15)
+]
+
+#resumeEntry(
+  "Tanium",
+  "Software Engineering Intern",
+  ("06/2023", "08/2023"))[
+  - Integrated a CRUD logger into an internal PostgreSQL database and RESTful API interface to elevate console visibility.
+  - Rapidly tackled 50+ Jira tickets within a 10-week internship period maintaining a Knex.js and React TypeScript codebase.
+  - Exercised test-driven development and data validation using Jest, Jasmine, and Joi to ensure UI and API reliability.
+]
+
+#resumeEntry(
+  "GT College of Computing",
+  "Senior Teaching Assistant",
+  ("01/2023", "05/2024"))[
+  - Led biweekly lectures on the foundations of computer architecture, the C language, and memory allocation principles.
+  - Developed unit testing suites, docker images for auto-grading, and course software, servicing 1000+ students per semester.
+]
+
+#resumeEntry(
+  "Union Pacific",
+  "Technology Intern",
+  ("05/2022", "08/2022"))[
+  - Designed explainable ML regression models to estimate rail shipment prices for customers using XGBoost and SHAP.
+  - Performed rigorous feature engineering to achieve a 31% RMSE decrease versus UP's existing pricing analytics solution.
+]
+
+#resumeEntry(
+  "GT EPIC Lab",
+  "Undergraduate Research Assistant",
+  ("01/2022", "08/2023"))[
+  - Analyzed data across 400+ experimental trials to discover optimal human exoskeleton torque assistance profiles.
+  - Automated a time series data pipeline producing MATLAB structures for efficient access, analysis, and distribution.
+]
+
+// #resumeEntry("Brooklyn College CUNY", "Independent Researcher", "07/2019", "12/2021")[
+//   // - Performed research on audio and vision deep learning applications under Dr. Michael I Mandel.
+//   - Refined an existing bird audio detection neural network to be over 90% accurate using the PCEN audio preprocessor.
+//   - Utilized foreground segmentation models to predict and automatically annotate animal presence in image data.
+//   - Co-Author of a #link("https://ieeexplore.ieee.org/document/9053338")[2020 IEEE ICASSP conference paper]
+//     featuring my research on ML for bird audio detection.
+// ]
+
+== Projects
+// == Projects & Research
+#separator()
+
+#let githubIconLink(pageLink) = {
+  return [#text(style: "normal")[(#link(pageLink)[#icon[]])]]
+}
+
+#let githubRepoIcon(repoName, user: "richardso21") = {
+  let url = "https://github.com/" + user + "/" + repoName
+  return [#githubIconLink(url)]
+}
+
+
+#resumeEntry(
+  "LLM + 10-K",
+  [Streamlit, Plotly, Google Gemini #githubRepoIcon("llm-plus-10k")],
+  "05/2024")[
+  - Constructed a web interface to query and plot financial metrics extracted from the SEC EDGAR 10-K filings database.
+  - Leveraged prompt engineering and Google Gemini 1.5 Flash to extract information reliably across different tickers.
+]
+
+#resumeEntry(
+  "Generative Data Augmentation for Image Classification",
+  [PyTorch, Stable Diffusion, ControlNet #githubIconLink("https://richardso21.github.io/controlnet-augmentation/2024/04/20/final-project.html")],
+  "04/2024")[
+  - Experimented with multiple image generative models to enhance image classification accuracy when data is scarce.
+  - Observed a 10% F1 increase for Resnet-50 on a compact dataset when augmented with ControlNet-generated images.
+]
+
+#resumeEntry(
+  "LC3Tools",
+  [C++, Vue, Electron, LC-3 Assembly #githubRepoIcon("lc3tools", user: "gt-cs2110")],
+  ("10/2023", "05/2024"))[
+  - Lead developer of the educational tooling suite to code, assemble, and simulate assembly programs for the
+    #link("https://en.wikipedia.org/wiki/Little_Computer_3")[LC-3].
+  - Added countless quality-of-life improvements through student and instructor feedback as a fork from the original project.
+]
+
+#resumeEntry(
+  "Alaskan Wildlife Image Segmentation",
+  [Python, PyTorch, Pillow #githubRepoIcon("serp2021-bgsub")],
+  "09/2021")[
+  - Utilized and refined the FgSegNet segmentation model to predict and automatically annotate animal presence in image data.
+  - 1#super[st] Award Winner of 2021 Terra NYC STEM Fair and
+    #link("https://web.archive.org/web/20230528094139if_/https://www.cfgnh.org/articles/milton-fisher-fund-awards-104-000-in-scholarships")[Milton Fisher Scholarship for Innovation and Creativity].
+]
+
+// #resumeEntry(
+//   "Bird Audio Detection with PCEN",
+//   [Librosa, Matplotlib, Pandas #githubRepoIcon("serp2021-bgsub")],
+//   "03/2019")[
+// ]
+
+// *LC3Tools* | _C++, Electron, Vue, LC-3 Assembly_ #h(1fr) 01/
+
+// *LC-3 Program Assembler and Simulator* | _Go, Assembly, Little Computer 3_
+// (#link("https://github.com/richardso21/complxer")[#icon[]]) #h(1fr) 12/2022
+//   - Built a computer simulator in *Golang* that assembles and executes programs, satisfying most specifications of the LC-3 ISA.
+//   - Created while I was still a student for the course that taught the LC-3 assembly language and architecture (CS 2110).
+  // - Assembler supports syntax error checking and conversion from LC-3 assembly into object (binary) executables.
+
+// *eyePause* | _Typescript, Electron_
+//   - Engineered a desktop application to track screen-on time and assist users in taking regular breaks from the screen.
+  // - Documented my journey through its development in a .
+  // - Developed using the Electron framework and TypeScript language under the hood.
+
+// *Solar Car Telemetry System* | _C++, PlatformIO, SQLite_
+// (#link("https://github.com/richardso21/SITHS-SolarCar")[#icon[]]) #h(1fr) 08/2021
+//   - Prototyped a real-time solution to measure and transmit vital statistics of a solar car to a local SQLite database.
+//   - Programmed microcontrollers for precise communication between multiple hardware modules (GPS, ADCs, LoRa Radio).
 
 == Skills
 #separator()
@@ -60,73 +220,17 @@ _B.S. Computer Science, concentration in Interactive Intelligence --- GPA: 4.0 #
   align: (x, y) => (right, center, left).at(x),
   inset: 3.5pt,
   stroke: none,
-  [*Programming Languages*], [|], [Python, TypeScript, JavaScript, Go, C, C++, MATLAB, Java],
-  [*Frameworks / Libraries*], [|], [React, Jest, Express, NumPy, Pandas, Matplotlib, Scikit Learn, PyTorch, Keras],
-  [*Misc. Technologies*], [|], [Git, Jira, Github Actions, Vim, Firebase, PostgreSQL, SQlite, Docker, LaTeX, Salesforce CRM]
+  [*Programming Languages*], [|], [Python, TypeScript/JavaScript, C/C++, Go, MATLAB, Java],
+  [*Frameworks & Libraries*], [|], [React, Jest, Express, NumPy, Pandas, Scikit Learn, PyTorch],
+  [*Databases & Misc.*], [|], [Firebase, PostgreSQL, SQlite, Git, Github Actions, Docker, LaTeX, Vim]
 )
 #v(-2.5pt)
 
-== Work Experience
-#separator()
+// == Achievements
+// #separator()
 
-*Tanium* --- _Software Engineering Intern_ #h(1fr) 06/2023 -- 08/2023 \
-  - Developed *RESTful API* routes and frontend elements for a new interface that audits user *CRUD* operations 
-    on an underlying *PostgreSQL* database, improving customer visibility into the server console's state by 10x.
-  - Exercised test-driven development and data validation using *Jest*, *Jasmine*, and *Joi* to ensure UI and API reliability.
-  - Delivered rapid improvements & bug fixes in a *Knex.js* and *React TypeScript* monorepo, tracked using *Jira Kanban*.
-
-*Georgia Tech College of Computing* --- _Teaching Assistant_ #h(1fr) 01/2023 -- Present \
-  - Taught a 50-student cohort the foundations of computer acthitecture, the *C language*, and memory allocation principles.
-  - Primarily maintained #link("https://github.com/gt-cs2110/lc3tools")[*lc3tools*], a suite of educational tools to write, assemble, and simulate LC-3 assembly programs.
-  // - Mastered and taught the foundations of computer architecture, datapath tracing, *LC-3 assembly*, and the *C language*.
-  // - Led biweekly lecture sections of a 50-student cohort in Computer Organization & Programming (CS 2110).
-  // - Mastered and taught the foundations of computer architecture, datapath tracing, *LC-3 assembly*, and the *C language*.
-  - Aided 1600+ students in course material inquiries and assignment debugging through office hours and student Q&A forms.
-
-*Union Pacific* --- _Technology Intern_ #h(1fr) 05/2022 -- 08/2022 \
-  - Created and deployed an internal tool in *Angular* to simulate prices for hypothetical shipments based on past trends.
-  - Designed *ML regression* models for such price simulations/estimations using *Salesforce CRM Analytics* and *XGBoost*.
-  - Performed rigorous feature engineering on historical shipment datasets to maximize model accuracy up to 97% \
-    and decrease error margins of estimations by 31% versus UP's existing pricing analytics solution.
-
-*Georgia Tech EPIC Lab* --- _Undergraduate Research Assistant_ #h(1fr) 01/2022 -- 08/2023 \
-  - Analyzed data across 400+ experimental trials to discover optimal human exoskeleton torque assistance profiles.
-  - Automated a data pipeline for N-D signal time series into *MATLAB* structures for convenient access and distribution.
-  - Optimized data loading for *ConvNet* gait phase estimators to be 25x faster with *NumPy* vectorization.
-
-*Brooklyn College CUNY* --- _Independent Researcher_ #h(1fr) 07/2019 -- 12/2021 \
-  - Performed research on *audio and vision deep learning* applications under Dr. Michael I Mandel.
-  - Refined an existing bird audio detection *neural network* to be over 90% accurate using the PCEN audio preprocessor.
-  - Utilized foreground segmentation models to predict and automatically annotate animal presence in image data.
-  - Co-Author of a #link("https://ieeexplore.ieee.org/document/9053338")[2020 *IEEE ICASSP* conference paper] 
-    featuring my research on ML for bird audio detection.
-
-== Projects
-#separator()
-
-// #show link: (it) => underline(stroke:1pt + white)[#it]
-
-*LC-3 Program Assembler and Simulator* #link("https://github.com/richardso21/complxer")[#icon[]] | 
-_Go, Assembly, Little Computer 3_ #h(1fr) 12/2022
-  - Built a computer simulator in *Golang* that assembles and executes programs, satisfying most specifications of the LC-3 ISA.
-  - Created while I was still a student for the course that taught the LC-3 assembly language and architecture (CS 2110).
-  // - Assembler supports syntax error checking and conversion from LC-3 assembly into object (binary) executables.
-
-// *eyePause* | _Typescript, Electron_
-//   - Engineered a desktop application to track screen-on time and assist users in taking regular breaks from the screen.
-  // - Documented my journey through its development in a .
-  // - Developed using the Electron framework and TypeScript language under the hood.
-
-*Solar Car Telemetry System* #link("https://github.com/richardso21/SITHS-SolarCar")[#icon[]] | 
-_C++, PlatformIO, SQLite_ #h(1fr) 08/2021
-  - Prototyped a real-time solution to measure and transmit vital statistics of a solar car to a local *SQLite* database.
-  - Programmed microcontrollers for precise communication between multiple hardware modules (GPS, ADCs, LoRa Radio).
-
-== Achievements
-#separator()
-
-  - Cultivated 800,000+ viewers and 970+ followers in my technology/programming blog on 
-    #link("https://richardso21.medium.com")[Medium].
-  - Winner of the #link("https://www.cfgnh.org/articles/milton-fisher-fund-awards-104-000-in-scholarships")[
-    2021 Milton Fisher Scholarship for Innovation and Creativity].
-  - 1#super[st] Award Winner of the 2020 Terra NYC STEM Fair.
+//   - Cultivated 800,000+ viewers and 970+ followers in my technology/programming blog on
+//     #link("https://richardso21.medium.com")[Medium].
+//   - Winner of the #link("https://www.cfgnh.org/articles/milton-fisher-fund-awards-104-000-in-scholarships")[
+//     2021 Milton Fisher Scholarship for Innovation and Creativity].
+//   - 1#super[st] Award Winner of the 2020 Terra NYC STEM Fair.
