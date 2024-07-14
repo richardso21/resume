@@ -81,9 +81,9 @@ _B.S./M.S. Computer Science, Interactive Intelligence --- GPA: 4.0
   "Amazon Web Services",
   "Software Engineering Intern (ML)",
   ("05/2024", "08/2024"))[
-  - Part of an internal investigative team aiming to quantitatively measure and analyze user/developer experience across AWS.
-  - Overhauled a pipeline to ingest unstructured user sessions into a queryable data lake leveraging AWS Lambda, S3, and Glue.
-  - Optimized a screenshot labeling process used to categorize user activity through AWS Rekognition and Augmented AI.
+  - Member of an investigative research team that quantitatively analyzes user and developer experience across AWS.
+  - Reduced an internal data ingestion pipeline's runtime by 5x leveraging concurrent/parallelized AWS Lambda invocations.
+  - Automated activity labeling of user session screenshots using Amazon Rekognition, A2I, and Anthropic's Claude LLMs.
   // - #lorem(50)
   // - #lorem(15)
   // - #lorem(15)
@@ -93,8 +93,9 @@ _B.S./M.S. Computer Science, Interactive Intelligence --- GPA: 4.0
   "GT Financial Services Innovation Lab",
   "Research Assistant",
   ("05/2024", "Present"))[
-  - Explored benchmarking strategies, datasets, and metrics to evaluate against state-of-the-art financial LLMs.
-  - Compiled and curated large textual datasets for LLM fine-tuning with Scrapy, BeautifulSoup4 and NLTK.
+  - Explored benchmarking strategies and metrics to evaluate against state-of-the-art LLMs in a financial/economic setting.
+  - Devised robust document parsers with BeautifulSoup, RegEx, and spaCy to compile immense datasets for LLM fine-tuning.
+  // - Compiled immense textual datasets for LLM fine-tuning with BeautifulSoup4 and spaCy, devising elabora.
   // - #lorem(15)
   // - #lorem(15)
 ]
@@ -129,7 +130,7 @@ _B.S./M.S. Computer Science, Interactive Intelligence --- GPA: 4.0
   "Undergraduate Research Assistant",
   ("01/2022", "08/2023"))[
   - Analyzed data across 400+ experimental trials to discover optimal human exoskeleton torque assistance profiles.
-  - Automated a time series data pipeline producing MATLAB structures for efficient access, analysis, and distribution.
+  - Refactored a time series data pipeline producing MATLAB structures for efficient access, analysis, and distribution.
 ]
 
 // #resumeEntry("Brooklyn College CUNY", "Independent Researcher", "07/2019", "12/2021")[
@@ -158,8 +159,8 @@ _B.S./M.S. Computer Science, Interactive Intelligence --- GPA: 4.0
   "LLM + 10-K",
   [Streamlit, Plotly, Google Gemini #githubRepoIcon("llm-plus-10k")],
   "05/2024")[
-  - Constructed a web interface to query and plot financial metrics extracted from the SEC EDGAR 10-K filings database.
-  - Leveraged prompt engineering and Google Gemini 1.5 Flash to extract information reliably across different tickers.
+  - Constructed a web interface to extract and plot financial metrics extracted from the SEC EDGAR 10-K filings database.
+  - Leveraged prompt engineering and Google Gemini 1.5 Flash to query data points consistently across all documents.
 ]
 
 #resumeEntry(
@@ -222,7 +223,7 @@ _B.S./M.S. Computer Science, Interactive Intelligence --- GPA: 4.0
   stroke: none,
   [*Programming Languages*], [|], [Python, TypeScript/JavaScript, C/C++, Go, MATLAB, Java],
   [*Frameworks & Libraries*], [|], [React, Jest, Express, NumPy, Pandas, Scikit Learn, PyTorch],
-  [*Databases & Misc.*], [|], [Firebase, PostgreSQL, SQlite, Git, Github Actions, Docker, LaTeX, Vim]
+  [*Databases & Misc.*], [|], [Firebase, PostgreSQL, SQlite, Git, Github Actions, Docker, LaTeX, Vim, AWS]
 )
 #v(-2.5pt)
 
