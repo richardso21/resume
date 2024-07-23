@@ -46,6 +46,15 @@
 
 #let resumeEntry(title, titleSeparator: [|], role, dates, body) = {
   [
+    *#title* #h(1fr) #dateOutput(dates) \
+    #text(style: "italic")[#role]\
+    #body
+  ]
+}
+
+// Single Line
+#let resumeEntrySL(title, titleSeparator: [|], role, dates, body) = {
+  [
     *#title* #titleSeparator #text(style: "italic")[#role] #h(1fr) #dateOutput(dates) \
     #body
   ]
@@ -67,11 +76,14 @@
 == Education
 #separator()
 
-*Georgia Institute of Technology* #h(1fr) 08/2021 -- 05/2025 \
-_B.S./M.S. Computer Science, Interactive Intelligence --- GPA: 4.0
+*Georgia Institute of Technology* #h(1fr) 08/2024 -- 05/2025 \
+_M.S. Computer Science, Interactive Intelligence
 #h(1fr) Atlanta, GA_ \
-- Coursework: Data Structures, Discrete Math,
-  Algorithms Honors, Machine Learning, Computer Vision
+*Georgia Institute of Technology* #h(1fr) 08/2021 -- 05/2024 \
+_B.S. Computer Science --- GPA: 4.0
+#h(1fr) Atlanta, GA_ \
+// // - Coursework: Data Structures, Discrete Math,
+//   Algorithms Honors, Machine Learning, Computer Vision
 
 == Work Experience
 #separator()
@@ -82,18 +94,18 @@ _B.S./M.S. Computer Science, Interactive Intelligence --- GPA: 4.0
   "Software Engineering Intern (ML)",
   ("05/2024", "08/2024"))[
   - Member of an investigative research team that quantitatively analyzes user and developer experience across AWS.
-  - Reduced an internal data ingestion pipeline's runtime by 5x leveraging concurrent/parallelized AWS Lambda invocations.
-  - Automated activity labeling of user session screenshots using Amazon Rekognition, A2I, and Anthropic's Claude LLMs.
+  - Reduced runtime of an internal data pipeline by >85% leveraging a parallelized fork-join model with AWS Lambda functions.
+  - Automated activity labeling of user session screenshots using Amazon Rekognition, Textract, and Anthropic's Claude LLMs.
   // - #lorem(50)
   // - #lorem(15)
   // - #lorem(15)
 ]
 
 #resumeEntry(
-  "GT Financial Services Innovation Lab",
+  "Georgia Tech Financial Services Innovation Lab",
   "Research Assistant",
   ("05/2024", "Present"))[
-  - Explored benchmarking strategies and metrics to evaluate against state-of-the-art LLMs in a financial/economic setting.
+  - Explored benchmarking strategies and metrics to evaluate against state-of-the-art LLMs in financial/economic contexts.
   - Devised robust document parsers with BeautifulSoup, RegEx, and spaCy to compile immense datasets for LLM fine-tuning.
   // - Compiled immense textual datasets for LLM fine-tuning with BeautifulSoup4 and spaCy, devising elabora.
   // - #lorem(15)
@@ -104,17 +116,17 @@ _B.S./M.S. Computer Science, Interactive Intelligence --- GPA: 4.0
   "Tanium",
   "Software Engineering Intern",
   ("06/2023", "08/2023"))[
-  - Integrated a CRUD logger into an internal PostgreSQL database and RESTful API interface to elevate console visibility.
-  - Rapidly tackled 50+ Jira tickets within a 10-week internship period maintaining a Knex.js and React TypeScript codebase.
+  - Implemented CRUD logging into an internal PostgreSQL database and RESTful API interface to elevate console visibility.
+  - Rapidly tackled 50+ Jira tickets within a 10-week internship maintaining a Knex.js and React TypeScript codebase.
   - Exercised test-driven development and data validation using Jest, Jasmine, and Joi to ensure UI and API reliability.
 ]
 
 #resumeEntry(
-  "GT College of Computing",
+  "Georgia Tech College of Computing",
   "Senior Teaching Assistant",
   ("01/2023", "05/2024"))[
-  - Led biweekly lectures on the foundations of computer architecture, the C language, and memory allocation principles.
-  - Developed unit testing suites, docker images for auto-grading, and course software, servicing 1000+ students per semester.
+  - Headed biweekly lectures on computer architecture foundations, the C language, and memory allocation principles.
+  - Developed unit testing suites, docker images for auto-grading, and course software servicing 1000+ students per semester.
 ]
 
 #resumeEntry(
@@ -125,13 +137,13 @@ _B.S./M.S. Computer Science, Interactive Intelligence --- GPA: 4.0
   - Performed rigorous feature engineering to achieve a 31% RMSE decrease versus UP's existing pricing analytics solution.
 ]
 
-#resumeEntry(
-  "GT EPIC Lab",
-  "Undergraduate Research Assistant",
-  ("01/2022", "08/2023"))[
-  - Analyzed data across 400+ experimental trials to discover optimal human exoskeleton torque assistance profiles.
-  - Refactored a time series data pipeline producing MATLAB structures for efficient access, analysis, and distribution.
-]
+// #resumeEntry(
+//   "GT EPIC Lab",
+//   "Undergraduate Research Assistant",
+//   ("01/2022", "08/2023"))[
+//   - Analyzed data across 400+ experimental trials to discover optimal human exoskeleton torque assistance profiles.
+//   - Refactored a time series data pipeline producing MATLAB structures for efficient access, analysis, and distribution.
+// ]
 
 // #resumeEntry("Brooklyn College CUNY", "Independent Researcher", "07/2019", "12/2021")[
 //   // - Performed research on audio and vision deep learning applications under Dr. Michael I Mandel.
@@ -155,15 +167,15 @@ _B.S./M.S. Computer Science, Interactive Intelligence --- GPA: 4.0
 }
 
 
-#resumeEntry(
-  "LLM + 10-K",
-  [Streamlit, Plotly, Google Gemini #githubRepoIcon("llm-plus-10k")],
-  "05/2024")[
-  - Constructed a web interface to extract and plot financial metrics extracted from the SEC EDGAR 10-K filings database.
-  - Leveraged prompt engineering and Google Gemini 1.5 Flash to query data points consistently across all documents.
-]
+// #resumeEntrySL(
+//   "LLM + 10-K",
+//   [Streamlit, Plotly, Google Gemini #githubRepoIcon("llm-plus-10k")],
+//   "05/2024")[
+//   - Constructed a web interface to extract and plot financial metrics extracted from the SEC EDGAR 10-K filings database.
+//   - Leveraged prompt engineering and Google Gemini 1.5 Flash to query data points consistently across all documents.
+// ]
 
-#resumeEntry(
+#resumeEntrySL(
   "Generative Data Augmentation for Image Classification",
   [PyTorch, Stable Diffusion, ControlNet #githubIconLink("https://richardso21.github.io/controlnet-augmentation/2024/04/20/final-project.html")],
   "04/2024")[
@@ -171,16 +183,16 @@ _B.S./M.S. Computer Science, Interactive Intelligence --- GPA: 4.0
   - Observed a 10% F1 increase for Resnet-50 on a compact dataset when augmented with ControlNet-generated images.
 ]
 
-#resumeEntry(
+#resumeEntrySL(
   "LC3Tools",
   [C++, Vue, Electron, LC-3 Assembly #githubRepoIcon("lc3tools", user: "gt-cs2110")],
   ("10/2023", "05/2024"))[
-  - Lead developer of the educational tooling suite to code, assemble, and simulate assembly programs for the
+  - Lead maintainer of the educational tooling suite to code, assemble, and simulate assembly programs for the
     #link("https://en.wikipedia.org/wiki/Little_Computer_3")[LC-3].
-  - Added countless quality-of-life improvements through student and instructor feedback as a fork from the original project.
+  - Added 20+ major quality-of-life improvements through student and instructor feedback as a fork from the original project.
 ]
 
-#resumeEntry(
+#resumeEntrySL(
   "Alaskan Wildlife Image Segmentation",
   [Python, PyTorch, Pillow #githubRepoIcon("serp2021-bgsub")],
   "09/2021")[
@@ -221,8 +233,8 @@ _B.S./M.S. Computer Science, Interactive Intelligence --- GPA: 4.0
   align: (x, y) => (right, center, left).at(x),
   inset: 3.5pt,
   stroke: none,
-  [*Programming Languages*], [|], [Python, TypeScript/JavaScript, C/C++, Go, MATLAB, Java],
-  [*Frameworks & Libraries*], [|], [React, Jest, Express, NumPy, Pandas, Scikit Learn, PyTorch],
+  [*Programming Languages*], [|], [Python, TypeScript/JavaScript, C/C++, Go, MATLAB, Java, Lua],
+  [*Frameworks & Libraries*], [|], [React, Vue, Angular, Jest, Express, Flask, PyTest, NumPy, Pandas, SkLearn, PyTorch],
   [*Databases & Misc.*], [|], [Firebase, PostgreSQL, SQlite, Git, Github Actions, Docker, LaTeX, Vim, AWS]
 )
 #v(-2.5pt)
