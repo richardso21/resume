@@ -79,11 +79,13 @@
 *Georgia Institute of Technology* #h(1fr) 08/2024 -- 05/2025 \
 _M.S. Computer Science, Interactive Intelligence
 #h(1fr) Atlanta, GA_ \
+  - Coursework: Machine Learning, Computer Vision, Natural Language Processing, Data-Centric ML, Algorithms Honors
+
+#v(-2pt)
+
 *Georgia Institute of Technology* #h(1fr) 08/2021 -- 05/2024 \
 _B.S. Computer Science --- GPA: 4.0
 #h(1fr) Atlanta, GA_ \
-// // - Coursework: Data Structures, Discrete Math,
-//   Algorithms Honors, Machine Learning, Computer Vision
 
 == Work Experience
 #separator()
