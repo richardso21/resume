@@ -2,12 +2,15 @@
 
 // #set text(spacing: 100%, size: 10pt, font: "Noto Sans")
 // #set text(spacing: 100%, size: 11pt)
-#show heading: it => {v(-5pt); smallcaps(it)}
+#show heading: it => {
+  v(-5pt)
+  smallcaps(it)
+}
 
 #show link: underline;
 #set page(
   margin: (x: 1cm, y: 1cm),
-  paper: "us-letter"
+  paper: "us-letter",
 )
 #set par(justify: true)
 
@@ -23,7 +26,11 @@
   ]
 }
 
-#let separator() = {v(-4pt); line(length: 100%); v(-5pt)}
+#let separator() = {
+  v(-4pt)
+  line(length: 100%)
+  v(-5pt)
+}
 
 #let dateOutput(dates) = {
   let t = type(dates)
@@ -61,16 +68,16 @@
 }
 
 #align(center)[
-#text(size:16pt)[
-= Richard So
-]
-#v(-5pt)
-#set box(height: 11pt)
-#icon[] 347-281-3815 |
-#icon[] richardso2021\@gmail.com |
-#icon[] #link("https://github.com/richardso21")[github.com/richardso21] |
-#icon[] #link("https://linkedin.com/in/richardso21")[in/richardso21] |
-#icon[] #link("https://sorichard.com")[sorichard.com]
+  #text(size: 16pt)[
+    = Richard So
+  ]
+  #v(-5pt)
+  #set box(height: 11pt)
+  #icon[] 347-281-3815 |
+  #icon[] richardso2021\@gmail.com |
+  #icon[] #link("https://github.com/richardso21")[github.com/richardso21] |
+  #icon[] #link("https://linkedin.com/in/richardso21")[in/richardso21] |
+  #icon[] #link("https://sorichard.com")[sorichard.com]
 ]
 
 == Education
@@ -79,7 +86,7 @@
 *Georgia Institute of Technology* #h(1fr) 08/2024 -- 05/2025 \
 _M.S. Computer Science, Interactive Intelligence
 #h(1fr) Atlanta, GA_ \
-  - Coursework: Machine Learning, Computer Vision, Natural Language Processing, Data-Centric ML, Algorithms Honors
+- Coursework: Machine Learning, Computer Vision, NLP, Data-Centric ML, Databases, Algorithms Honors
 
 #v(-2pt)
 
@@ -94,7 +101,8 @@ _B.S. Computer Science --- GPA: 4.0
 #resumeEntry(
   "Amazon Web Services",
   "Software Engineering Intern (ML)",
-  ("05/2024", "08/2024"))[
+  ("05/2024", "08/2024"),
+)[
   - Member of an investigative research team that quantitatively analyzes user and developer experience across AWS.
   - Reduced runtime of an internal data pipeline by >85% leveraging a parallelized fork-join model with AWS Lambda functions.
   - Automated activity labeling of user session screenshots using Amazon Rekognition, Textract, and Anthropic's Claude LLMs.
@@ -106,7 +114,8 @@ _B.S. Computer Science --- GPA: 4.0
 #resumeEntry(
   "Georgia Tech Financial Services Innovation Lab",
   "Research Assistant",
-  ("05/2024", "Present"))[
+  ("05/2024", "Present"),
+)[
   - Explored benchmarking strategies and metrics to evaluate against state-of-the-art LLMs in financial/economic contexts.
   - Devised robust document parsers with BeautifulSoup, RegEx, and spaCy to compile immense datasets for LLM fine-tuning.
   // - Compiled immense textual datasets for LLM fine-tuning with BeautifulSoup4 and spaCy, devising elabora.
@@ -117,7 +126,8 @@ _B.S. Computer Science --- GPA: 4.0
 #resumeEntry(
   "Tanium",
   "Software Engineering Intern",
-  ("06/2023", "08/2023"))[
+  ("06/2023", "08/2023"),
+)[
   - Implemented CRUD logging into an internal PostgreSQL database and RESTful API interface to elevate console visibility.
   - Rapidly tackled 50+ Jira tickets within a 10-week internship maintaining a Knex.js and React TypeScript codebase.
   - Exercised test-driven development and data validation using Jest, Jasmine, and Joi to ensure UI and API reliability.
@@ -126,7 +136,8 @@ _B.S. Computer Science --- GPA: 4.0
 #resumeEntry(
   "Georgia Tech College of Computing",
   "Senior Teaching Assistant",
-  ("01/2023", "05/2024"))[
+  ("01/2023", "05/2024"),
+)[
   - Headed biweekly lectures on computer architecture foundations, the C language, and memory allocation principles.
   - Developed unit testing suites, docker images for auto-grading, and course software servicing 1000+ students per semester.
 ]
@@ -134,7 +145,8 @@ _B.S. Computer Science --- GPA: 4.0
 #resumeEntry(
   "Union Pacific",
   "Technology Intern",
-  ("05/2022", "08/2022"))[
+  ("05/2022", "08/2022"),
+)[
   - Designed explainable ML regression models to estimate rail shipment prices for customers using XGBoost and SHAP.
   - Performed rigorous feature engineering to achieve a 31% RMSE decrease versus UP's existing pricing analytics solution.
 ]
@@ -180,7 +192,8 @@ _B.S. Computer Science --- GPA: 4.0
 #resumeEntrySL(
   "Generative Data Augmentation for Image Classification",
   [PyTorch, Stable Diffusion, ControlNet #githubIconLink("https://richardso21.github.io/controlnet-augmentation/2024/04/20/final-project.html")],
-  "04/2024")[
+  "04/2024",
+)[
   - Experimented with multiple image generative models to enhance image classification accuracy when data is scarce.
   - Observed a 10% F1 increase for Resnet-50 on a compact dataset when augmented with ControlNet-generated images.
 ]
@@ -188,7 +201,8 @@ _B.S. Computer Science --- GPA: 4.0
 #resumeEntrySL(
   "LC3Tools",
   [C++, Vue, Electron, LC-3 Assembly #githubRepoIcon("lc3tools", user: "gt-cs2110")],
-  ("10/2023", "05/2024"))[
+  ("10/2023", "05/2024"),
+)[
   - Lead maintainer of the educational tooling suite to code, assemble, and simulate assembly programs for the
     #link("https://en.wikipedia.org/wiki/Little_Computer_3")[LC-3].
   - Added 20+ major quality-of-life improvements through student and instructor feedback as a fork from the original project.
@@ -197,7 +211,8 @@ _B.S. Computer Science --- GPA: 4.0
 #resumeEntrySL(
   "Alaskan Wildlife Image Segmentation",
   [Python, PyTorch, Pillow #githubRepoIcon("serp2021-bgsub")],
-  "09/2021")[
+  "09/2021",
+)[
   - Utilized and refined the FgSegNet segmentation model to predict and automatically annotate animal presence in image data.
   - 1#super[st] Award Winner of 2021 Terra NYC STEM Fair and
     #link("https://web.archive.org/web/20230528094139if_/https://www.cfgnh.org/articles/milton-fisher-fund-awards-104-000-in-scholarships")[Milton Fisher Scholarship for Innovation and Creativity].
@@ -215,12 +230,12 @@ _B.S. Computer Science --- GPA: 4.0
 // (#link("https://github.com/richardso21/complxer")[#icon[]]) #h(1fr) 12/2022
 //   - Built a computer simulator in *Golang* that assembles and executes programs, satisfying most specifications of the LC-3 ISA.
 //   - Created while I was still a student for the course that taught the LC-3 assembly language and architecture (CS 2110).
-  // - Assembler supports syntax error checking and conversion from LC-3 assembly into object (binary) executables.
+// - Assembler supports syntax error checking and conversion from LC-3 assembly into object (binary) executables.
 
 // *eyePause* | _Typescript, Electron_
 //   - Engineered a desktop application to track screen-on time and assist users in taking regular breaks from the screen.
-  // - Documented my journey through its development in a .
-  // - Developed using the Electron framework and TypeScript language under the hood.
+// - Documented my journey through its development in a .
+// - Developed using the Electron framework and TypeScript language under the hood.
 
 // *Solar Car Telemetry System* | _C++, PlatformIO, SQLite_
 // (#link("https://github.com/richardso21/SITHS-SolarCar")[#icon[]]) #h(1fr) 08/2021
@@ -235,9 +250,17 @@ _B.S. Computer Science --- GPA: 4.0
   align: (x, y) => (right, center, left).at(x),
   inset: 3.5pt,
   stroke: none,
-  [*Programming Languages*], [|], [Python, TypeScript/JavaScript, C/C++, Go, MATLAB, Java, Lua],
-  [*Frameworks & Libraries*], [|], [React, Vue, Angular, Jest, Express, Flask, PyTest, NumPy, Pandas, SkLearn, PyTorch],
-  [*Databases & Misc.*], [|], [Firebase, PostgreSQL, SQlite, Git, Github Actions, Docker, LaTeX, Vim, AWS]
+  [*Programming Languages*],
+  [|],
+  [Python, TypeScript/JavaScript, C/C++, Go, Java, Lua],
+
+  [*Frameworks & Libraries*],
+  [|],
+  [React, Vue, Express, Electron, Flask, NumPy, Pandas, SkLearn, PyTorch],
+
+  [*Databases & Misc.*],
+  [|],
+  [PostgreSQL, SQLite, RocksDB, MongoDB, Firebase, Git, Docker, AWS],
 )
 #v(-2.5pt)
 
