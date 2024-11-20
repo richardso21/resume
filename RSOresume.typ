@@ -102,17 +102,18 @@ _B.S. Computer Science --- GPA: 4.0
   ("05/2024", "08/2024"),
 )[
   - Member of an investigative research team that quantitatively analyzes user and developer experience across AWS.
-  - Reduced runtime of an internal data pipeline by 85% leveraging a parallelized fork-join model with AWS Lambda functions.
+  - *Reduced runtime by 85%* for a data pipeline by leveraging a parallelized fork-join model with AWS Lambda functions.
   - Automated activity labeling of user session screenshots using Amazon Rekognition, Textract, and Anthropic's Claude LLMs.
 ]
 
 #resumeEntry(
-  "Georgia Tech Financial Services Innovation Lab",
+  // "Georgia Tech Financial Services Innovation Lab",
+  "Defsense Advanced Research Projects Agency (DARPA)",
   "Research Assistant",
   ("05/2024", "Present"),
 )[
   - Explored benchmarking strategies to evaluate against state-of-the-art, fine-tuned LLMs in financial/economic contexts.
-  - Experimented with hierarchical knowledge graphs to aid in query-focused summarization tasks for LLMs with Graph RAG.
+  - Experimented with *hierarchical knowledge graphs* to aid in query-focused summarization tasks with GraphRAG.
   // - Devised robust document parsers with BeautifulSoup, RegEx, and spaCy to compile immense datasets for LLM fine-tuning.
 ]
 
@@ -122,7 +123,7 @@ _B.S. Computer Science --- GPA: 4.0
   ("06/2023", "08/2023"),
 )[
   - Implemented CRUD logging into a backend PostgreSQL database and REST API to elevate user visibility of Tanium Server.
-  - Rapidly tackled 50+ Jira tickets within a 10-week internship maintaining a Knex.js and React TypeScript codebase.
+  - Rapidly tackled *50+ feature/bug tickets* within a 10-week internship maintaining a Knex.js and React TypeScript codebase.
   - Exercised test-driven development and data validation best practices using Jest, Jasmine, and Joi.
 ]
 
@@ -132,7 +133,7 @@ _B.S. Computer Science --- GPA: 4.0
   ("01/2023", "05/2024"),
 )[
   - Lectured biweekly to 50+ students on computer architecture foundations, the C language, and memory allocation concepts.
-  - Developed unit testing suites, docker images for auto-grading, and course software for 1000+ students per semester.
+  - Developed unit testing suites, docker images for auto-grading, and course software for *1000+ students per semester*.
 ]
 
 #resumeEntry(
@@ -141,7 +142,7 @@ _B.S. Computer Science --- GPA: 4.0
   ("05/2022", "08/2022"),
 )[
   - Designed explainable ML regression models to estimate rail shipment prices for customers using XGBoost and SHAP.
-  - Performed rigorous feature engineering to achieve a 31% RMSE decrease versus UP's existing pricing analytics solution.
+  - Performed rigorous feature engineering to achieve a *31% accuracy gain* versus UP's existing pricing analytics solution.
 ]
 
 == Projects
@@ -172,7 +173,7 @@ _B.S. Computer Science --- GPA: 4.0
   "04/2024",
 )[
   - Experimented with multiple image generative models to enhance image classification accuracy when data is scarce.
-  - Observed a 10% F1 increase for Resnet-50 on a compact dataset when augmented with ControlNet-generated images.
+  - Observed a *10% F1 increase* for Resnet-50 on a compact dataset when augmented with ControlNet-generated images.
 ]
 
 #resumeEntrySL(
@@ -183,7 +184,7 @@ _B.S. Computer Science --- GPA: 4.0
   - Lead maintainer of the educational tooling suite to code, assemble, and simulate assembly programs for the
     #link("https://en.wikipedia.org/wiki/Little_Computer_3")[LC-3].
   // - Added 20+ major quality-of-life improvements through student and instructor feedback as a fork from the original project.
-  - Contributed 6000+ lines of code as major quality-of-life improvements through student and instructor feedback.
+  - Contributed *6000+ lines of code* via major quality-of-life improvements through student and instructor feedback.
 ]
 
 #resumeEntrySL(
@@ -192,7 +193,7 @@ _B.S. Computer Science --- GPA: 4.0
   "09/2021",
 )[
   - Utilized and refined the FgSegNet segmentation model to predict and automatically annotate animal presence in image data.
-  - 1#super[st] Award Winner of 2021 Terra NYC STEM Fair and
+  - *1#super[st] Award Winner* of 2021 Terra NYC STEM Fair and
     #link("https://web.archive.org/web/20230528094139if_/https://www.cfgnh.org/articles/milton-fisher-fund-awards-104-000-in-scholarships")[Milton Fisher Scholarship for Innovation and Creativity].
 ]
 
