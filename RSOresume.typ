@@ -82,9 +82,9 @@
 #separator()
 
 *Georgia Institute of Technology* #h(1fr) 08/2024 -- 05/2025 \
-_M.S. Computer Science, Interactive Intelligence
+_M.S. Computer Science, Machine Learning --- GPA: 4.0
 #h(1fr) Atlanta, GA_ \
-- Coursework: Machine Learning, Computer Vision, NLP, Data-Centric ML, Databases, Algorithms Honors
+- Coursework: ML, Deep Learning, Computer Vision, NLP, Databases, Networks, Algorithms Honors
 
 #v(-2pt)
 
@@ -101,9 +101,10 @@ _B.S. Computer Science --- GPA: 4.0
   "Software Engineering Intern (ML)",
   ("05/2024", "08/2024"),
 )[
-  - Member of an investigative research team that quantitatively analyzes user and developer experience across AWS.
+  - Analyzed developer experience across AWS through quantitative features extracted from recorded workflow sessions.
+  // - Member of an investigative research team that quantitatively analyzes user and developer experience across AWS.
   - *Reduced runtime by 85%* for a data pipeline by leveraging a parallelized fork-join model with AWS Lambda functions.
-  - Automated activity labeling of user session screenshots using Amazon Rekognition, Textract, and Anthropic's Claude LLMs.
+  - Automated activity labeling of session screenshots using Amazon Rekognition, Textract, and Anthropic's Claude LLMs.
 ]
 
 #resumeEntry(
@@ -168,12 +169,22 @@ _B.S. Computer Science --- GPA: 4.0
 // ]
 
 #resumeEntrySL(
+  "Domain Generalization with Mixture of Experts",
+  [PyTorch, Lightning, W&B #githubRepoIcon("meadow", user: "Data-Centric-ML-MEADOW")],
+  "12/2024",
+)[
+  - Investigated MoEs potential for robust, efficient classification for out-of-domain data splits of the iWildCam competition.
+  - Orchestrated *large-scale deep learning experiments*, sweeping across 75+ hyperparameter and model configurations.
+  // - Lorem
+]
+
+#resumeEntrySL(
   "Generative Data Augmentation for Image Classification",
   [PyTorch, Stable Diffusion, ControlNet #githubIconLink("https://richardso21.github.io/controlnet-augmentation/2024/04/20/final-project.html")],
   "04/2024",
 )[
   - Experimented with multiple image generative models to enhance image classification accuracy when data is scarce.
-  - Observed a *10% F1 increase* for Resnet-50 on a compact dataset when augmented with ControlNet-generated images.
+  - Observed a *10% F1 increase* for Resnet-50 on a sparse dataset when augmented with ControlNet-generated images.
 ]
 
 #resumeEntrySL(
@@ -187,15 +198,15 @@ _B.S. Computer Science --- GPA: 4.0
   - Contributed *6000+ lines of code* via major quality-of-life improvements through student and instructor feedback.
 ]
 
-#resumeEntrySL(
-  "Alaskan Wildlife Image Segmentation",
-  [Python, PyTorch, Pillow #githubRepoIcon("serp2021-bgsub")],
-  "09/2021",
-)[
-  - Utilized and refined the FgSegNet segmentation model to predict and automatically annotate animal presence in image data.
-  - *1#super[st] Award Winner* of 2021 Terra NYC STEM Fair and
-    #link("https://web.archive.org/web/20230528094139if_/https://www.cfgnh.org/articles/milton-fisher-fund-awards-104-000-in-scholarships")[Milton Fisher Scholarship for Innovation and Creativity].
-]
+// #resumeEntrySL(
+//   "Alaskan Wildlife Image Segmentation",
+//   [Python, PyTorch, Pillow #githubRepoIcon("serp2021-bgsub")],
+//   "09/2021",
+// )[
+//   - Utilized and refined the FgSegNet segmentation model to predict and automatically annotate animal presence in image data.
+//   - *1#super[st] Award Winner* of 2021 Terra NYC STEM Fair and
+//     #link("https://web.archive.org/web/20230528094139if_/https://www.cfgnh.org/articles/milton-fisher-fund-awards-104-000-in-scholarships")[Milton Fisher Scholarship for Innovation and Creativity].
+// ]
 
 == Skills
 #separator()
@@ -205,16 +216,11 @@ _B.S. Computer Science --- GPA: 4.0
   align: (x, y) => (right, center, left).at(x),
   inset: 3.5pt,
   stroke: none,
-  [*Programming Languages*],
-  [|],
-  [Python, TypeScript/JavaScript, C/C++, Go, Java, Lua],
-
+  [*Programming Languages*], [|], [Python, TypeScript/JavaScript, C/C++, Go, Java, Lua],
   [*Frameworks & Libraries*],
   [|],
-  [React, Vue, Express, Electron, Flask, NumPy, Pandas, SkLearn, PyTorch, HuggingFace],
+  [React, Svelte, Express, Electron, Flask, NumPy, Pandas, SkLearn, PyTorch, HuggingFace],
 
-  [*Databases & Misc.*],
-  [|],
-  [PostgreSQL, SQLite, RocksDB, MongoDB, Firebase, Git, Docker, AWS, Neovim],
+  [*Databases & Misc.*], [|], [PostgreSQL, SQLite, RocksDB, MongoDB, Firebase, Git, Docker, AWS, Neovim],
 )
 #v(-2.5pt)
