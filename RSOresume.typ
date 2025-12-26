@@ -15,7 +15,7 @@
 #let icon(source) = {
   box(baseline: 10%)[
     #align(bottom)[
-      #text(font: "MesloLGS NF", size: 13pt)[
+      #text(font: "JetBrainsMono NFM", size: 13pt)[
         #h(.1em)
         #source
         #h(.1em)
@@ -45,20 +45,19 @@
   if l == 1 {
     return [#dates.at(0)]
   } else {
-    return [#dates.at(0) --- #dates.at(1)]
+    return [#dates.at(0) - #dates.at(1)]
   }
 }
 
-#let resumeEntry(title, titleSeparator: [|], role, dates, body) = {
-  [
-    *#title* #h(1fr) #dateOutput(dates) \
-    #text(style: "italic")[#role]\
-    #body
-  ]
-}
+// #let resumeEntry(title, titleSeparator: [|], role, dates, body) = {
+//   [
+//     *#title* #h(1fr) #dateOutput(dates) \
+//     #text(style: "italic")[#role]\
+//     #body
+//   ]
+// }
 
-// Single Line
-#let resumeEntrySL(title, titleSeparator: [|], role, dates, body) = {
+#let resumeEntry(title, titleSeparator: [|], role, dates, body) = {
   [
     *#title* #titleSeparator #text(style: "italic")[#role] #h(1fr) #dateOutput(dates) \
     #body
@@ -71,9 +70,10 @@
   ]
   #v(-5pt)
   #set box(height: 11pt)
+  #icon[] Seattle, WA |
   #icon[] 347-281-3815 |
   #icon[] richardso2021\@gmail.com |
-  #icon[] #link("https://github.com/richardso21")[github.com/richardso21] |
+  // #icon[] #link("https://github.com/richardso21")[github.com/richardso21] |
   #icon[] #link("https://linkedin.com/in/richardso21")[in/richardso21] |
   #icon[] #link("https://sorichard.com")[sorichard.com]
 ]
@@ -81,69 +81,65 @@
 == Education
 #separator()
 
-*Georgia Institute of Technology* #h(1fr) 08/2024 -- 05/2025 \
-_M.S. Computer Science, Machine Learning --- GPA: 4.0
+*Georgia Institute of Technology* #h(1fr) 08/2024 - 05/2025 \
+_M.S. Computer Science, Machine Learning - GPA: 4.0
 #h(1fr) Atlanta, GA_ \
 - Coursework: ML, Deep Learning, Computer Vision, NLP, Databases, Networks, Algorithms Honors
 
 #v(-2pt)
 
-*Georgia Institute of Technology* #h(1fr) 08/2021 -- 05/2024 \
-_B.S. Computer Science --- GPA: 4.0
+*Georgia Institute of Technology* #h(1fr) 08/2021 - 05/2024 \
+_B.S. Computer Science - GPA: 4.0
 #h(1fr) Atlanta, GA_ \
 
 == Work Experience
 #separator()
 
-
-#resumeEntry(
-  "Amazon Web Services",
-  "Software Engineering Intern (ML)",
-  ("05/2024", "08/2024"),
-)[
-  - Analyzed developer experience across AWS through quantitative features extracted from recorded workflow sessions.
-  // - Member of an investigative research team that quantitatively analyzes user and developer experience across AWS.
-  - *Reduced runtime by 85%* for a data pipeline by leveraging a parallelized fork-join model with AWS Lambda functions.
-  - Automated activity labeling of session screenshots using Amazon Rekognition, Textract, and Anthropic's Claude LLMs.
+#resumeEntry("Amazon", "Software Development Engineer", ("08/2025", "Present"))[
+  - Maintained *data lake infrastructure* (AWS Glue, EMR, Lambda, S3)
+    for Amazon Brand Analytics, enabling sellers to monitor *sales performance
+    insights across 2B+ products*.
+  - Orchestrated *high-throughput data vending pipelines* with Apache Spark to
+    transform *\~100 TB/week* of raw purchase activity into curated analytical
+    datasets for internal teams and sellers at scale.
+  - Developed core components of an *explainable ML root cause analysis
+    service*, leveraging *Shapley value feature attribution* to identify
+    drivers of product underperformance relative to benchmarks.
 ]
 
 #resumeEntry(
-  // "Georgia Tech Financial Services Innovation Lab",
-  "Defsense Advanced Research Projects Agency (DARPA)",
+  "Data To Insights (D2I) Lab @ Georgia Tech",
   "Research Assistant",
-  ("05/2024", "Present"),
+  ("01/2025", "05/2025"),
 )[
-  - Explored benchmarking strategies to evaluate against state-of-the-art, fine-tuned LLMs in financial/economic contexts.
-  - Experimented with *hierarchical knowledge graphs* to aid in query-focused summarization tasks with GraphRAG.
-  // - Devised robust document parsers with BeautifulSoup, RegEx, and spaCy to compile immense datasets for LLM fine-tuning.
+  - Investigated time-to-first-token (TTFT) reduction in *multi-tenant
+    LLMs* by overlapping document retrieval and prefill.
+  - Led *scenario-based benchmarking* by simulating web crawler and ANNS
+    retrieval to evaluate latency improvements of our custom token prefilling
+    mechanism under realistic workloads.
+  - Analyzed results for and *co-authored MLSys research paper* demonstrating
+    up to *11x faster latencies in TTFT*.
 ]
 
-#resumeEntry(
-  "Tanium",
-  "Software Engineering Intern",
-  ("06/2023", "08/2023"),
-)[
-  - Implemented CRUD logging into a backend PostgreSQL database and REST API to elevate user visibility of Tanium Server.
-  - Rapidly tackled *50+ feature/bug tickets* within a 10-week internship maintaining a Knex.js and React TypeScript codebase.
-  - Exercised test-driven development and data validation best practices using Jest, Jasmine, and Joi.
+#resumeEntry("Amazon Web Services", "Software Engineering Intern (ML)", ("05/2024", "08/2024"))[
+  - Implemented *ML-driven analysis of developer workflows* by aggregating
+    behavioral features (keystrokes, UI events, time-on-task), enabling
+    quantitative DX comparison across cloud platforms and *influencing AWS
+    roadmap decisions*.
+  - Re-architected a batch inference pipeline to exploit parallelism, *reducing
+    runtime by >85% (hours → minutes)*.
+  - Automated developer intent and task classification from desktop screenshots
+    using AWS *Rekognition*, *Textract*, and *multi-modal LLM prompting on Bedrock*.
 ]
 
-#resumeEntry(
-  "Georgia Tech College of Computing",
-  "Senior Teaching Assistant",
-  ("01/2023", "05/2024"),
-)[
-  - Lectured biweekly to 50+ students on computer architecture foundations, the C language, and memory allocation concepts.
-  - Developed unit testing suites, docker images for auto-grading, and course software for *1000+ students per semester*.
-]
-
-#resumeEntry(
-  "Union Pacific",
-  "Technology Intern",
-  ("05/2022", "08/2022"),
-)[
-  - Designed explainable ML regression models to estimate rail shipment prices for customers using XGBoost and SHAP.
-  - Performed rigorous feature engineering to achieve a *31% accuracy gain* versus UP's existing pricing analytics solution.
+#resumeEntry("Tanium", "Software Engineering Intern", ("06/2023", "08/2023"))[
+  - Built CRUD logging to Tanium console's PostgreSQL backend and REST
+    endpoints to support a *customer-facing audit feature*, allowing review of
+    console activity and detection of unauthorized configuration changes.
+  - Resolved *50+ feature/bug tickets* within a 10-week internship maintaining
+    a Knex.js + React TypeScript codebase.
+  - Ensured code quality and correctness by applying *TDD and validation best
+    practices* using Jest, Jasmine, and Joi.
 ]
 
 == Projects
@@ -151,62 +147,51 @@ _B.S. Computer Science --- GPA: 4.0
 #separator()
 
 #let githubIconLink(pageLink) = {
-  return [#text(style: "normal")[(#link(pageLink)[#icon[]])]]
+  // diable underline for icon link
+  return [
+    #show underline: it => it.body
+    #text(style: "normal")[#link(pageLink)[#icon[]]]
+  ]
 }
 
-#let githubRepoIcon(repoName, user: "richardso21") = {
-  let url = "https://github.com/" + user + "/" + repoName
-  return [#githubIconLink(url)]
+#let projectEntry(title, link, dates, body) = {
+  [
+    *#title* #githubIconLink(link) #h(1fr) #dateOutput(dates) \
+    #body
+  ]
 }
 
-
-// #resumeEntrySL(
-//   "LLM + 10-K",
-//   [Streamlit, Plotly, Google Gemini #githubRepoIcon("llm-plus-10k")],
-//   "05/2024")[
-//   - Constructed a web interface to extract and plot financial metrics extracted from the SEC EDGAR 10-K filings database.
-//   - Leveraged prompt engineering and Google Gemini 1.5 Flash to query data points consistently across all documents.
-// ]
-
-#resumeEntrySL(
-  "Domain Generalization with Mixture of Experts",
-  [PyTorch, Lightning, W&B #githubRepoIcon("meadow", user: "Data-Centric-ML-MEADOW")],
-  "12/2024",
-)[
-  - Investigated MoEs potential for robust, efficient classification for out-of-domain data splits of the iWildCam competition.
-  - Orchestrated *large-scale deep learning experiments*, sweeping across 75+ hyperparameter and model configurations.
-  // - Lorem
-]
-
-#resumeEntrySL(
+#projectEntry(
   "Generative Data Augmentation for Image Classification",
-  [PyTorch, Stable Diffusion, ControlNet #githubIconLink("https://richardso21.github.io/controlnet-augmentation/2024/04/20/final-project.html")],
+  "https://richardso21.github.io/controlnet-augmentation/2024/04/20/final-project.html",
   "04/2024",
 )[
-  - Experimented with multiple image generative models to enhance image classification accuracy when data is scarce.
-  - Observed a *10% F1 increase* for Resnet-50 on a sparse dataset when augmented with ControlNet-generated images.
+  - Experimented with *Stable Diffusion* and *ControlNet* to enhance image
+    classification accuracy when data is scarce.
+  - Observed a *10% F1 increase* for Resnet-50 on a limited dataset when
+    augmented with ControlNet-generated images.
+  - Orchestrated *large-scale DL experiments*, sweeping across 100+
+    hyperparameter and model configurations.
 ]
 
-#resumeEntrySL(
+#projectEntry(
   "LC3Tools",
-  [C++, Vue, Electron, LC-3 Assembly #githubRepoIcon("lc3tools", user: "gt-cs2110")],
-  ("09/2023", "05/2024"),
+  "https://github.com/gt-cs2110/lc3tools",
+  (
+    "09/2023",
+    "05/2024",
+  ),
 )[
-  - Lead maintainer of the educational tooling suite to code, assemble, and simulate assembly programs for the
-    #link("https://en.wikipedia.org/wiki/Little_Computer_3")[LC-3].
-  // - Added 20+ major quality-of-life improvements through student and instructor feedback as a fork from the original project.
-  - Contributed *6000+ lines of code* via major quality-of-life improvements through student and instructor feedback.
+  - *Lead maintainer* of the educational tooling suite for coding, assembling, and
+    simulating #link("https://en.wikipedia.org/wiki/Little_Computer_3")[LC-3]
+    assembly programs.
+  - Actively collected student & instructor feedback to continuously drive
+    *major quality-of-life enhancements*.
+  // - Contributed *6k+ lines* of student and instructor-driven quality-of-life
+  //   improvements to refine reliability and usability.
+  - Served *1000+ students every semester* as one of the core, required
+    tools for Georgia Tech's CS2110 course.
 ]
-
-// #resumeEntrySL(
-//   "Alaskan Wildlife Image Segmentation",
-//   [Python, PyTorch, Pillow #githubRepoIcon("serp2021-bgsub")],
-//   "09/2021",
-// )[
-//   - Utilized and refined the FgSegNet segmentation model to predict and automatically annotate animal presence in image data.
-//   - *1#super[st] Award Winner* of 2021 Terra NYC STEM Fair and
-//     #link("https://web.archive.org/web/20230528094139if_/https://www.cfgnh.org/articles/milton-fisher-fund-awards-104-000-in-scholarships")[Milton Fisher Scholarship for Innovation and Creativity].
-// ]
 
 == Skills
 #separator()
@@ -216,11 +201,9 @@ _B.S. Computer Science --- GPA: 4.0
   align: (x, y) => (right, center, left).at(x),
   inset: 3.5pt,
   stroke: none,
-  [*Programming Languages*], [|], [Python, TypeScript/JavaScript, C/C++, Go, Java, Lua],
-  [*Frameworks & Libraries*],
-  [|],
-  [React, Svelte, Express, Electron, Flask, NumPy, Pandas, SkLearn, PyTorch, HuggingFace],
+  [*Programming Languages*], [|], [Python, TypeScript/JavaScript, Java, Scala, C/C++, Go, Lua],
+  [*Frameworks & Libraries*], [|], [NumPy, Pandas, SkLearn, PyTorch, Lightning, Apache Spark, React, Svelte],
 
-  [*Databases & Misc.*], [|], [PostgreSQL, SQLite, RocksDB, MongoDB, Firebase, Git, Docker, AWS, Neovim],
+  [*Databases & Misc.*], [|], [PostgreSQL, SQLite, DynamoDB, Elasticsearch, Docker, Apache Airflow, AWS CDK],
 )
 #v(-2.5pt)
