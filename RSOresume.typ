@@ -99,9 +99,9 @@ _B.S. Computer Science - GPA: 4.0
   - Maintained *data lake infrastructure* (AWS Glue, EMR, Lambda, S3)
     for Amazon Brand Analytics, enabling sellers to monitor *sales performance
     insights across 2B+ products*.
-  - Orchestrated *high-throughput data vending pipelines* with Apache Spark to
-    transform *\~100 TB/week* of raw purchase activity into curated analytical
-    datasets for internal teams and sellers at scale.
+  - Orchestrated *high-throughput data vending pipelines* with Apache Spark and
+    Airflow to transform *\~100 TB/week* of raw purchase activity into curated
+    analytical datasets for internal teams and sellers.
   - Developed core components of an *explainable ML root cause analysis
     service*, leveraging *Shapley value feature attribution* to identify
     drivers of product underperformance relative to benchmarks.
@@ -138,7 +138,7 @@ _B.S. Computer Science - GPA: 4.0
     console activity and detection of unauthorized configuration changes.
   - Resolved *50+ feature/bug tickets* within a 10-week internship maintaining
     a Knex.js + React TypeScript codebase.
-  - Ensured code quality and correctness by applying *TDD and validation best
+  - Ensured code quality and correctness by applying *TDD & validation best
     practices* using Jest, Jasmine, and Joi.
 ]
 
@@ -187,8 +187,6 @@ _B.S. Computer Science - GPA: 4.0
     assembly programs.
   - Actively collected student & instructor feedback to continuously drive
     *major quality-of-life enhancements*.
-  // - Contributed *6k+ lines* of student and instructor-driven quality-of-life
-  //   improvements to refine reliability and usability.
   - Served *1000+ students every semester* as one of the core, required
     tools for Georgia Tech's CS2110 course.
 ]
