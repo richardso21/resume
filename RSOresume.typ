@@ -99,12 +99,12 @@ _B.S. Computer Science - GPA: 4.0
   - Maintained *data lake infrastructure* (AWS Glue, EMR, Lambda, S3)
     for Amazon Brand Analytics, enabling sellers to monitor *sales performance
     insights across 2B+ products*.
-  - Orchestrated *high-throughput data vending pipelines* with Apache Spark and
-    Airflow to transform *\~100 TB/week* of raw purchase activity into curated
-    analytical datasets for internal teams and sellers.
+  - Orchestrated *high-throughput data vending pipelines* with Apache Airflow
+    and Spark to transform *\~100 TB/week* of raw purchase activity into
+    curated analytical datasets for internal teams and sellers.
   - Developed core components of an *explainable ML root cause analysis
     service*, leveraging *Shapley value feature attribution* to identify
-    drivers of product underperformance relative to benchmarks.
+    drivers of product underperformance relative to market percentiles.
 ]
 
 #resumeEntry(
@@ -112,13 +112,13 @@ _B.S. Computer Science - GPA: 4.0
   "Research Assistant",
   ("01/2025", "05/2025"),
 )[
-  - Investigated time-to-first-token (TTFT) reduction in *multi-tenant
-    LLMs* by overlapping document retrieval and prefill.
+  - Investigated latency reduction in *multi-tenant LLMs for RAG workloads* by
+    overlapping document retrieval and prefill.
   - Led *scenario-based benchmarking* by simulating web crawler and ANNS
     retrieval to evaluate latency improvements of our custom token prefilling
     mechanism under realistic workloads.
   - Analyzed results for and *co-authored MLSys research paper* demonstrating
-    up to *11x faster latencies in TTFT*.
+    up to *11x speedup* with our strategy.
 ]
 
 #resumeEntry("Amazon Web Services", "Software Engineering Intern (ML)", ("05/2024", "08/2024"))[
@@ -127,7 +127,7 @@ _B.S. Computer Science - GPA: 4.0
     quantitative DX comparison across cloud platforms and *influencing AWS
     roadmap decisions*.
   - Re-architected a batch inference pipeline to exploit parallelism, *reducing
-    runtime by >85% (hours → minutes)*.
+    runtime by 85% (minutes $arrow$ seconds)*.
   - Automated developer intent and task classification from desktop screenshots
     using AWS *Rekognition*, *Textract*, and *multi-modal LLM prompting on Bedrock*.
 ]
